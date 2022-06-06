@@ -24,14 +24,17 @@ Please refer to the full-paper for more details.
 ```bash
 CUDA_VISIBLE_DEVICES=0 python search_cifar.py --dataset 'cifar10' --data_path '/path/to/cifar10'
 ```
+
 ### Search on ImageNet
 ```bash
 CUDA_VISIBLE_DEVICES=0,1 python search_imagenet.py --dataset 'imagenet' --data_path '/path/to/imagenet'
 ```
+
 ### Train from scratch on cifar-10/100
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train_cifar.py --dataset 'cifar10' --data_path '/path/to/cifar10' --path '/path/to/searched/folder' --cutout --auxiliary
 ```
+
 ### Train from scratch on ImageNet
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node 4 train_imagenet.py \
@@ -47,5 +50,5 @@ CUDA_VISIBLE_DEVICES=0 python finetune.py --lr 0.2 --train_ratio 'data ratio you
 First, download the searched result from [here](https://drive.google.com/file/d/1dlKbaIKijUZv7iq0tRtNX0Pn-Soj1tXO/view?usp=sharing). Then train from scratch or finetune using the above commands.
 
 ### Runtime Headup
-Searching on cifar-10/100 dataset for 300 epochs will take around 1~2 days according to the GPU model used. As for ImageNet, it may consume up to 7~14 days to search for 250 epochs. 
+Searching on cifar-10/100 dataset for 300 epochs will take around 1-2 days according to the GPU model used. As for ImageNet, it may consume up to 7-14 days to search for 250 epochs. 
 
