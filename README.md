@@ -1,6 +1,6 @@
 # Self-supervised-and-Weight-preserving-NAS
 
-This is the official release for the paper **Towards Self-supervised and Weight-preserving Neural Architecture Search**
+This is the official release for the paper [**Towards Self-supervised and Weight-preserving Neural Architecture Search**](https://arxiv.org/abs/2206.04125)
 
 In this work, we propose the **S**elf-**s**upervised and **W**eight-**p**reserving **N**eural **A**rchitecture **S**earch (SSWP-NAS) as an extension of the current NAS framework by allowing the self-supervision and retaining the concomitant weights discovered during the search stage. As such, we simplify the workflow of NAS to a one-stage and proxy-free procedure. Experimental results show that the architectures searched by the proposed framework achieve state-of-the-art accuracy on CIFAR-10, CIFAR-100, and ImageNet datasets without using manual labels. Moreover, we show that employing the concomitant weights as initialization consistently outperforms the random initialization and the two-stage weight pre-training method by a clear margin under semi-supervised learning scenarios. 
 
@@ -52,3 +52,13 @@ First, download the searched result from [here](https://drive.google.com/file/d/
 ### Runtime Headup
 Searching on cifar-10/100 dataset for 300 epochs will take around 1-2 days according to the GPU model used. As for ImageNet, it may consume up to 7-14 days to search for 250 epochs. 
 
+## Reference
+If you find this repository helpful, please consider citing the following paper:
+```
+@misc{https://doi.org/10.48550/arxiv.2206.04125,
+  author = {Li, Zhuowei and Gao, Yibo and Zha, Zhenzhou and HU, Zhiqiang and Xia, Qing and Zhang, Shaoting and Metaxas, Dimitris N.},
+  title = {Towards Self-supervised and Weight-preserving Neural Architecture Search},
+  publisher = {arXiv},
+  year = {2022},
+}
+```
